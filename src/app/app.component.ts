@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import {lorem} from "faker"
+import { faker } from '@faker-js/faker';
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,15 @@ import {lorem} from "faker"
 })
 export class AppComponent {
   title = 'typying-challenge';
+  randomText='';
+  constructor(){
+     this.randomText = faker.lorem.sentence()
+  }
+
+
+  onChangeInput(text:string){
+      console.log(text);
+      
+  }
+
 }
